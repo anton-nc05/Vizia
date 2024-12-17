@@ -1,0 +1,111 @@
+<!-- Use !X to override pico.css styles, yes it;s a fucking pain -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Vizia GI</title>
+    <meta
+      name="description"
+      content="Vizia GI - An AI-powered math animation engine"
+    />
+    <script src="ldpage.js" defer></script>
+    <!-- Pico.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.min.css"
+    />
+    <style>
+      main {
+        text-align: center;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+        margin-top: 2rem;
+        justify-content: center;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      button {
+        width: 100%;
+        padding: 0.75rem 1rem;
+      }
+      .submit-button {
+        margin-top: 1rem;
+        width: 120px !important; /* Force override styles */
+        background-color: white; /* Replace with the dark blue background color */
+        color: #001f3f; /* Text color matching the dark blue background */
+      }
+      footer {
+        margin-top: 3rem;
+        padding: 1rem 0;
+        background-color: var(--contrast);
+        color: var(--background);
+        text-align: center;
+      }
+
+      #search::placeholder {
+        font-style: italic;
+      }
+      button:hover {
+        background-color: var(--primary-hover);
+        cursor: pointer;
+      }
+      button:active {
+        transform: scale(0.95);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main -->
+    <main class="container">
+      <!-- Header -->
+      <header>
+        <h1>Vizia GI</h1>
+        <p>An AI-powered math animation engine</p>
+      </header>
+
+      <!-- Search Box -->
+      <form>
+        <input
+          type="search"
+          id="search"
+          name="search"
+          placeholder="Enter your equation or query here"
+        />
+      </form>
+
+      <!-- Grid of Math Symbols -->
+      <div class="grid">
+        <button>+</button>
+        <button>-</button>
+        <button>&times;</button>
+        <button>&divide;</button>
+        <button>&le;</button>
+        <button>&ge;</button>
+        <button>&pi;</button>
+        <button>&radic;</button>
+        <button>&Sigma;</button>
+        <button>&int;</button>
+        <button>d/dx</button>
+        <button>&infin;</button>
+      </div>
+
+      <!-- Submit Button -->
+      <div>
+        <button type="submit" class="submit-button">Submit</button>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      © 2024 The Vizia Project. All rights reserved.
+    </footer>
+  </body>
+</html>
