@@ -1,7 +1,7 @@
 <!-- Use !X to override pico.css styles, yes it;s a fucking pain -->
 
 <!DOCTYPE html>
-<html lang="en" data-theme="light"> <!-- Default to light mode -->
+<html lang="en" data-theme="light"> <!-- Default to light mode-->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +12,7 @@
       content="Vizia GI - An AI-powered math animation engine"
     />
     <script src="ldpage.js" defer></script>
-    <!-- Pico.css -->
+    <!-- pico.css - super simple style library -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.min.css"
@@ -37,9 +37,9 @@
       }
       .submit-button {
         margin-top: 1rem;
-        width: 120px !important; /* Force override styles */
-        background-color: white; /* Replace with the dark blue background color */
-        color: #001f3f; /* Text color matching the dark blue background */
+        width: 120px !important; 
+        background-color: white; 
+        color: #001f3f; 
       }
   
       footer {
@@ -48,7 +48,7 @@
         background-color: var(--contrast);
         color: var(--background);
         text-align: center;
-        padding-bottom: 2rem; /* Added padding */
+        padding-bottom: 2rem; /
       }
 
       #search::placeholder {
@@ -69,15 +69,14 @@
     </style>
   </head>
   <body>
-    <!-- Main -->
     <main class="container">
-      <!-- Header -->
+
       <header>
         <h1>Vizia GI</h1>
         <p>An AI-powered math animation engine</p>
       </header>
 
-      <!-- Search Box -->
+      <!-- Search box-->
       <form>
         <input
           type="search"
@@ -87,7 +86,7 @@
         />
       </form>
 
-      <!-- Grid of Math Symbols -->
+      <!-- Symbol buttons-->
       <div class="grid">
         <button>+</button>
         <button>-</button>
@@ -103,7 +102,7 @@
         <button>&infin;</button>
       </div>
 
-      <!-- Submit Button -->
+      <!-- Submit button-->
       <div>
         <button type="submit" class="submit-button">Submit</button>
       </div>
@@ -118,7 +117,7 @@
       </fieldset>
     </div>
 
-    <!-- Minimal theme switcher -->
+    <!-- Theme switcher, Move to seperate file?  -->
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         const themeSwitch = document.getElementById('theme-switch');
@@ -128,7 +127,7 @@
       });
     </script>
 
-    <!-- Footer -->
+  
     <footer>
       © 2024 The Vizia Project. All rights reserved.
     </footer>
