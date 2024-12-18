@@ -1,8 +1,7 @@
 <!-- Use !X to override pico.css styles, yes it;s a fucking pain -->
 
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light"> <!-- Default to light mode -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,12 +41,14 @@
         background-color: white; /* Replace with the dark blue background color */
         color: #001f3f; /* Text color matching the dark blue background */
       }
+  
       footer {
         margin-top: 3rem;
         padding: 1rem 0;
         background-color: var(--contrast);
         color: var(--background);
         text-align: center;
+        padding-bottom: 2rem; /* Added padding */
       }
 
       #search::placeholder {
@@ -60,6 +61,11 @@
       button:active {
         transform: scale(0.95);
       }
+
+      .theme-toggle {
+        margin-left: 2rem;
+      }
+
     </style>
   </head>
   <body>
@@ -101,7 +107,26 @@
       <div>
         <button type="submit" class="submit-button">Submit</button>
       </div>
+
     </main>
+    <div class = "theme-toggle">
+      <fieldset>
+        <label for="theme-switch">
+          <input type="checkbox" role="switch" id="theme-switch" name="theme-switch" />
+          Dark Mode
+        </label>
+      </fieldset>
+    </div>
+
+    <!-- Minimal theme switcher -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const themeSwitch = document.getElementById('theme-switch');
+        themeSwitch.addEventListener('change', function () {
+          document.documentElement.setAttribute('data-theme', themeSwitch.checked ? 'dark' : 'light');
+        });
+      });
+    </script>
 
     <!-- Footer -->
     <footer>
